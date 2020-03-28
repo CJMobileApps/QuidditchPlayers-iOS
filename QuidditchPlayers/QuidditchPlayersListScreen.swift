@@ -9,33 +9,39 @@
 import UIKit
 
 class QuidditchPlayersListScreen: UIViewController {
-
-    @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var playerTableView: UITableView!
     
     var quidditchPlayers: [QuidditchPlayer] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         quidditchPlayers = createArray()
         
-        tableView.delegate = self
-        tableView.dataSource = self
+        playerTableView.delegate = self
+        playerTableView.dataSource = self
     }
     
     func createArray() -> [QuidditchPlayer] {
         
         var quidditchPlayers: [QuidditchPlayer] = []
         
-        let player1 = QuidditchPlayer(image: UIImage(named: "harrypotter")!, name: "Harry Potter 1")
-        let player2 = QuidditchPlayer(image: UIImage(named: "harrypotter")!, name: "Harry Potter 2")
-        let player3 = QuidditchPlayer(image: UIImage(named: "harrypotter")!, name: "Harry Potter 3")
-        let player4 = QuidditchPlayer(image: UIImage(named: "harrypotter")!, name: "Harry Potter 4")
-
+        let player1 = QuidditchPlayer(image: UIImage(named: "harrypotter")!, name: "Harry Potter 1",house: "Gryffindor", favoriteSubject: "Defense Against The Dark Arts", positionName: "Seeker", yearsPlayed: "[1991, 1992, 1993, 1994, 1995, 1996,  1997]")
+        
+        let player2 = QuidditchPlayer(image: UIImage(named: "harrypotter")!, name: "Harry Potter 2",house: "Gryffindor", favoriteSubject: "Defense Against The Dark Arts", positionName: "Seeker", yearsPlayed: "[1991, 1992, 1993, 1994, 1995, 1996,  1997]")
+        
+        let player3 = QuidditchPlayer(image: UIImage(named: "harrypotter")!, name: "Harry Potter 3",house: "Gryffindor", favoriteSubject: "Defense Against The Dark Arts", positionName: "Seeker", yearsPlayed: "[1991, 1992, 1993, 1994, 1995, 1996,  1997]")
+        
+        let player4 = QuidditchPlayer(image: UIImage(named: "harrypotter")!, name: "Harry Potter 4",house: "Gryffindor", favoriteSubject: "Defense Against The Dark Arts", positionName: "Seeker", yearsPlayed: "[1991, 1992, 1993, 1994, 1995, 1996,  1997]")
+        
+        let player5 = QuidditchPlayer(image: UIImage(named: "harrypotter")!, name: "Harry Potter 5",house: "Gryffindor", favoriteSubject: "Defense Against The Dark Arts", positionName: "Seeker", yearsPlayed: "[1991, 1992, 1993, 1994, 1995, 1996,  1997]")
+        
         quidditchPlayers.append(player1)
         quidditchPlayers.append(player2)
         quidditchPlayers.append(player3)
         quidditchPlayers.append(player4)
+        quidditchPlayers.append(player5)
         
         return quidditchPlayers
     }

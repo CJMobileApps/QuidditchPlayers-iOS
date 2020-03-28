@@ -10,17 +10,21 @@ import UIKit
 
 class QuidditchPlayerCell: UITableViewCell {
 
-    //@IBOutlet weak var quidditchPlayerImageView: UIImageView!
-    //@IBOutlet weak var playerCellName: LabelHeadline!
-    //@IBOutlet weak var playerCellPosition: LabelBodyAlternateTextColor!
+    @IBOutlet weak var playerImage: UIImageView!
+    @IBOutlet weak var playerName: LabelHeadline!
+    @IBOutlet weak var playerPosition: LabelBodyAlternateTextColor!
+    @IBOutlet weak var playerHouse: LabelBodyPrimaryTextColor!
+    @IBOutlet weak var playerFavoriteSubject: LabelBodyPrimaryTextColor!
+    @IBOutlet weak var playerYearsPlayed: LabelBodyPrimaryTextColor!
+    @IBOutlet weak var playerStatus: LabelBodyPrimaryTextColor!
     
     func setPlayer(player: QuidditchPlayer) {
-        //quidditchPlayerImageView.image = player.image
-        //playerCellName.text = player.name
-        //playerCellPosition.text = "Seeker"
-        //playerCellHouseHeader.text = "House"
-        //playerCellHouseText.text = "Gryffindor"
-        //playerCellFavoriteSubjectHeader.text = "Favorite Subject"
-        //playerCellFavoriteSubjecText.text = "Defense Against The Dark Arts"
+        playerImage.image = player.image
+        playerName.text = player.name
+        playerPosition.text = player.positionName
+        playerHouse.text = player.house
+        playerFavoriteSubject.text = player.favoriteSubject
+        playerYearsPlayed.text = player.yearsPlayed
+        playerStatus.text = "Harry Potter is eating"
     }
 }

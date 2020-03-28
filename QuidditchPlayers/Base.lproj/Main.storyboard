@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fuZ-83-0Rt">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fuZ-83-0Rt" userLabel="Player Table View">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
@@ -155,6 +155,15 @@
                                                 <constraint firstItem="ViT-m5-vkV" firstAttribute="leading" secondItem="OeV-Hv-Nt5" secondAttribute="leading" constant="10" id="xmM-9Q-xA3"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="playerFavoriteSubject" destination="piB-46-Z7u" id="GSE-65-Ft3"/>
+                                            <outlet property="playerHouse" destination="JPC-SU-FXo" id="6Xe-3l-sB9"/>
+                                            <outlet property="playerImage" destination="dRr-Nd-zPR" id="cQH-w1-NLF"/>
+                                            <outlet property="playerName" destination="Dbf-2W-F3G" id="8BU-hI-WVk"/>
+                                            <outlet property="playerPosition" destination="4Z9-tL-pIC" id="hmp-rX-RcB"/>
+                                            <outlet property="playerStatus" destination="VF8-mb-wWE" id="pvC-Y6-EZC"/>
+                                            <outlet property="playerYearsPlayed" destination="24x-Ey-pVc" id="fjv-Pa-9q6"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -170,7 +179,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="5ZO-kd-Mg1"/>
                     <connections>
-                        <outlet property="tableView" destination="fuZ-83-0Rt" id="hJv-nV-x5Y"/>
+                        <outlet property="playerTableView" destination="fuZ-83-0Rt" id="6fb-pF-h45"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

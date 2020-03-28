@@ -70,7 +70,8 @@
 		3C2DD44D242C4C08000A1297 /* QuidditchPlayers */ = {
 			isa = PBXGroup;
 			children = (
-				3C2DD46B242DA460000A1297 /* res */,
+				3CCC6DA9242F55EC0015036B /* Models */,
+				3C2DD46B242DA460000A1297 /* Res */,
 				3C2DD468242D9FEA000A1297 /* CustomViews */,
 				3C2DD44E242C4C08000A1297 /* AppDelegate.swift */,
 				3C2DD450242C4C09000A1297 /* SceneDelegate.swift */,
@@ -80,7 +81,6 @@
 				3C2DD457242C4C0D000A1297 /* Assets.xcassets */,
 				3C2DD459242C4C0D000A1297 /* LaunchScreen.storyboard */,
 				3C2DD45C242C4C0D000A1297 /* Info.plist */,
-				3C2DD466242D7D06000A1297 /* QuidditchPlayer.swift */,
 			);
 			path = QuidditchPlayers;
 			sourceTree = "<group>";
@@ -95,13 +95,21 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
-		3C2DD46B242DA460000A1297 /* res */ = {
+		3C2DD46B242DA460000A1297 /* Res */ = {
 			isa = PBXGroup;
 			children = (
 				3C2DD46C242DA4B9000A1297 /* Colors.swift */,
 				3CCC6DA1242DAB240015036B /* Fonts.swift */,
 			);
-			path = res;
+			path = Res;
+			sourceTree = "<group>";
+		};
+		3CCC6DA9242F55EC0015036B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3C2DD466242D7D06000A1297 /* QuidditchPlayer.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
