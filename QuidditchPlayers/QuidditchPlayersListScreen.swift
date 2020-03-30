@@ -12,39 +12,40 @@ class QuidditchPlayersListScreen: UIViewController {
     
     @IBOutlet weak var playerTableView: UITableView!
     
-    var quidditchPlayers: [QuidditchPlayer] = []
+    var quidditchPlayers: [Player] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        quidditchPlayers = createArray()
-        
-        playerTableView.delegate = self
-        playerTableView.dataSource = self
+        let apiCompleted: ([Player]) -> Void = { (players) in
+
+            self.quidditchPlayers = players
+            self.playerTableView.delegate = self
+            self.playerTableView.dataSource = self
+            self.playerTableView.reloadData()
+        }
+        makeApiCall(apiCompleted: apiCompleted)
     }
     
-    func createArray() -> [QuidditchPlayer] {
+    func makeApiCall(apiCompleted: @escaping ([Player]) -> ()) {
         
-        var quidditchPlayers: [QuidditchPlayer] = []
-        
-        let player1 = QuidditchPlayer(image: UIImage(named: "harrypotter")!, name: "Harry Potter 1",house: "Gryffindor", favoriteSubject: "Defense Against The Dark Arts", positionName: "Seeker", yearsPlayed: "[1991, 1992, 1993, 1994, 1995, 1996,  1997]")
-        
-        let player2 = QuidditchPlayer(image: UIImage(named: "harrypotter")!, name: "Harry Potter 2",house: "Gryffindor", favoriteSubject: "Defense Against The Dark Arts", positionName: "Seeker", yearsPlayed: "[1991, 1992, 1993, 1994, 1995, 1996,  1997]")
-        
-        let player3 = QuidditchPlayer(image: UIImage(named: "harrypotter")!, name: "Harry Potter 3",house: "Gryffindor", favoriteSubject: "Defense Against The Dark Arts", positionName: "Seeker", yearsPlayed: "[1991, 1992, 1993, 1994, 1995, 1996,  1997]")
-        
-        let player4 = QuidditchPlayer(image: UIImage(named: "harrypotter")!, name: "Harry Potter 4",house: "Gryffindor", favoriteSubject: "Defense Against The Dark Arts", positionName: "Seeker", yearsPlayed: "[1991, 1992, 1993, 1994, 1995, 1996,  1997]")
-        
-        let player5 = QuidditchPlayer(image: UIImage(named: "harrypotter")!, name: "Harry Potter 5",house: "Gryffindor", favoriteSubject: "Defense Against The Dark Arts", positionName: "Seeker", yearsPlayed: "[1991, 1992, 1993, 1994, 1995, 1996,  1997]")
-        
-        quidditchPlayers.append(player1)
-        quidditchPlayers.append(player2)
-        quidditchPlayers.append(player3)
-        quidditchPlayers.append(player4)
-        quidditchPlayers.append(player5)
-        
-        return quidditchPlayers
-    }
+        if let url = URL(string: "https://cjmobileapps.com/api/v1/quidditch/players") {
+            URLSession.shared.dataTask(with: url) { data, response, error in
+                if let data = data {
+                    do {
+                        let players = try JSONDecoder().decode([Player].self, from: data)
+
+                        DispatchQueue.main.async {
+                            apiCompleted(players)
+                        }
+                        
+                    } catch let error {
+                        print(error)
+                    }
+                }
+            }.resume()
+        }
+    }   
 }
 
 extension QuidditchPlayersListScreen: UITableViewDataSource, UITableViewDelegate {
@@ -54,11 +55,11 @@ extension QuidditchPlayersListScreen: UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let quidditchPlayer = quidditchPlayers[indexPath.row]
+        let player = quidditchPlayers[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuidditchPlayerCell") as! QuidditchPlayerCell
         
-        cell.setPlayer(player: quidditchPlayer)
+        cell.setPlayer(player: player)
         
         return cell
     }

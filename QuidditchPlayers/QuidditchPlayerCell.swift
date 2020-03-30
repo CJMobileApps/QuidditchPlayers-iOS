@@ -18,13 +18,13 @@ class QuidditchPlayerCell: UITableViewCell {
     @IBOutlet weak var playerYearsPlayed: LabelBodyPrimaryTextColor!
     @IBOutlet weak var playerStatus: LabelBodyPrimaryTextColor!
     
-    func setPlayer(player: QuidditchPlayer) {
-        playerImage.image = player.image
-        playerName.text = player.name
-        playerPosition.text = player.positionName
-        playerHouse.text = player.house
+    func setPlayer(player: Player) {
+        playerImage.image = UIImage(named: "harrypotter")!
+        playerName.text =  "\(player.firstName) \(player.lastName)"
+        playerPosition.text = "Seeker" //todo update with position from api call
+        playerHouse.text = StringConstants.GRYFFINDOR
         playerFavoriteSubject.text = player.favoriteSubject
-        playerYearsPlayed.text = player.yearsPlayed
+        playerYearsPlayed.text = player.yearsPlayed.description
         playerStatus.text = "Harry Potter is eating"
     }
 }
