@@ -13,7 +13,6 @@
 		3C2DD458242C4C0D000A1297 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C2DD457242C4C0D000A1297 /* Assets.xcassets */; };
 		3C2DD45B242C4C0D000A1297 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2DD459242C4C0D000A1297 /* LaunchScreen.storyboard */; };
 		3C2DD463242C50EE000A1297 /* QuidditchPlayersListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DD462242C50EE000A1297 /* QuidditchPlayersListScreen.swift */; };
-		3C2DD467242D7D06000A1297 /* QuidditchPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DD466242D7D06000A1297 /* QuidditchPlayer.swift */; };
 		3C2DD46A242DA172000A1297 /* LabelHeadline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DD469242DA172000A1297 /* LabelHeadline.swift */; };
 		3C2DD46D242DA4B9000A1297 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DD46C242DA4B9000A1297 /* Colors.swift */; };
 		3CCC6DA2242DAB240015036B /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC6DA1242DAB240015036B /* Fonts.swift */; };
@@ -22,9 +21,11 @@
 		3CCC6DA8242E10470015036B /* QuidditchPlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC6DA7242E10470015036B /* QuidditchPlayerCell.swift */; };
 		3CCC6DAF24319C7B0015036B /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC6DAE24319C7B0015036B /* Player.swift */; };
 		3CCC6DB12431C7800015036B /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC6DB02431C7800015036B /* StringConstants.swift */; };
+		B5331D0BAF6417B1103DA63B /* Pods_QuidditchPlayers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B4B3152107C6F437676C2B /* Pods_QuidditchPlayers.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05B4B3152107C6F437676C2B /* Pods_QuidditchPlayers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuidditchPlayers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C2DD44B242C4C08000A1297 /* QuidditchPlayers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuidditchPlayers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C2DD44E242C4C08000A1297 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C2DD450242C4C09000A1297 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,7 +34,6 @@
 		3C2DD45A242C4C0D000A1297 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C2DD45C242C4C0D000A1297 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C2DD462242C50EE000A1297 /* QuidditchPlayersListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuidditchPlayersListScreen.swift; sourceTree = "<group>"; };
-		3C2DD466242D7D06000A1297 /* QuidditchPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuidditchPlayer.swift; sourceTree = "<group>"; };
 		3C2DD469242DA172000A1297 /* LabelHeadline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelHeadline.swift; sourceTree = "<group>"; };
 		3C2DD46C242DA4B9000A1297 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		3CCC6DA1242DAB240015036B /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -42,6 +42,8 @@
 		3CCC6DA7242E10470015036B /* QuidditchPlayerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuidditchPlayerCell.swift; sourceTree = "<group>"; };
 		3CCC6DAE24319C7B0015036B /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		3CCC6DB02431C7800015036B /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
+		6F0D2140AFA74511F3A9421B /* Pods-QuidditchPlayers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuidditchPlayers.debug.xcconfig"; path = "Target Support Files/Pods-QuidditchPlayers/Pods-QuidditchPlayers.debug.xcconfig"; sourceTree = "<group>"; };
+		A51823C22ADF1BA91D481913 /* Pods-QuidditchPlayers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuidditchPlayers.release.xcconfig"; path = "Target Support Files/Pods-QuidditchPlayers/Pods-QuidditchPlayers.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5331D0BAF6417B1103DA63B /* Pods_QuidditchPlayers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +63,8 @@
 			children = (
 				3C2DD44D242C4C08000A1297 /* QuidditchPlayers */,
 				3C2DD44C242C4C08000A1297 /* Products */,
+				F9AE7F9FB8202ACB14839927 /* Pods */,
+				4D8D387D5D54307465B401D4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,10 +117,27 @@
 		3CCC6DA9242F55EC0015036B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3C2DD466242D7D06000A1297 /* QuidditchPlayer.swift */,
 				3CCC6DAE24319C7B0015036B /* Player.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4D8D387D5D54307465B401D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05B4B3152107C6F437676C2B /* Pods_QuidditchPlayers.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9AE7F9FB8202ACB14839927 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6F0D2140AFA74511F3A9421B /* Pods-QuidditchPlayers.debug.xcconfig */,
+				A51823C22ADF1BA91D481913 /* Pods-QuidditchPlayers.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +147,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C2DD45F242C4C0D000A1297 /* Build configuration list for PBXNativeTarget "QuidditchPlayers" */;
 			buildPhases = (
+				FFBF283CD0A2773F908B8389 /* [CP] Check Pods Manifest.lock */,
 				3C2DD447242C4C08000A1297 /* Sources */,
 				3C2DD448242C4C08000A1297 /* Frameworks */,
 				3C2DD449242C4C08000A1297 /* Resources */,
+				E8800B7478EC3A734D52BDCA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -184,6 +208,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E8800B7478EC3A734D52BDCA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuidditchPlayers/Pods-QuidditchPlayers-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuidditchPlayers/Pods-QuidditchPlayers-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuidditchPlayers/Pods-QuidditchPlayers-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFBF283CD0A2773F908B8389 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuidditchPlayers-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3C2DD447242C4C08000A1297 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -198,7 +264,6 @@
 				3CCC6DB12431C7800015036B /* StringConstants.swift in Sources */,
 				3C2DD46D242DA4B9000A1297 /* Colors.swift in Sources */,
 				3C2DD463242C50EE000A1297 /* QuidditchPlayersListScreen.swift in Sources */,
-				3C2DD467242D7D06000A1297 /* QuidditchPlayer.swift in Sources */,
 				3CCC6DA8242E10470015036B /* QuidditchPlayerCell.swift in Sources */,
 				3C2DD46A242DA172000A1297 /* LabelHeadline.swift in Sources */,
 			);
@@ -342,6 +407,7 @@
 		};
 		3C2DD460242C4C0D000A1297 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F0D2140AFA74511F3A9421B /* Pods-QuidditchPlayers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -360,6 +426,7 @@
 		};
 		3C2DD461242C4C0D000A1297 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A51823C22ADF1BA91D481913 /* Pods-QuidditchPlayers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

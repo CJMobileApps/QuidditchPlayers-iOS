@@ -19,7 +19,9 @@ class QuidditchPlayerCell: UITableViewCell {
     @IBOutlet weak var playerStatus: LabelBodyPrimaryTextColor!
     
     func setPlayer(player: Player) {
-        playerImage.image = UIImage(named: "harrypotter")!
+        let imageUrl = URL(string: player.imageUrl)
+        playerImage.kf.setImage(with: imageUrl)
+        
         playerName.text =  "\(player.firstName) \(player.lastName)"
         playerPosition.text = "Seeker" //todo update with position from api call
         playerHouse.text = StringConstants.GRYFFINDOR

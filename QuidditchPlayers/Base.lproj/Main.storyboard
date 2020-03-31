@@ -26,10 +26,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="279"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dRr-Nd-zPR" userLabel="PlayerCell_Image">
-                                                    <rect key="frame" x="10" y="10" width="60" height="95"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRr-Nd-zPR" userLabel="PlayerCell_Image">
+                                                    <rect key="frame" x="10" y="10" width="60" height="60"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="60" id="fCD-Oz-THj"/>
+                                                        <constraint firstAttribute="width" constant="60" id="2ME-NI-HIM"/>
                                                         <constraint firstAttribute="height" constant="60" id="ynF-SC-MPn"/>
                                                     </constraints>
                                                 </imageView>
@@ -141,6 +141,7 @@
                                                 <constraint firstItem="D2M-Fu-0H8" firstAttribute="top" secondItem="H43-pb-1tM" secondAttribute="bottom" constant="10" id="Lce-Kz-FcP"/>
                                                 <constraint firstAttribute="trailing" secondItem="Did-8t-yWQ" secondAttribute="trailing" constant="10" id="NgS-cC-TzE"/>
                                                 <constraint firstItem="H43-pb-1tM" firstAttribute="leading" secondItem="OeV-Hv-Nt5" secondAttribute="leading" constant="10" id="OmI-pK-58F"/>
+                                                <constraint firstItem="dRr-Nd-zPR" firstAttribute="leading" secondItem="OeV-Hv-Nt5" secondAttribute="leading" constant="10" id="TK0-Dz-7Kv"/>
                                                 <constraint firstAttribute="trailing" secondItem="ViT-m5-vkV" secondAttribute="trailing" constant="10" id="VHB-J1-sK1"/>
                                                 <constraint firstItem="dRr-Nd-zPR" firstAttribute="top" secondItem="OeV-Hv-Nt5" secondAttribute="top" constant="10" id="VtW-n3-onz"/>
                                                 <constraint firstAttribute="bottom" secondItem="D2M-Fu-0H8" secondAttribute="bottom" constant="10" id="bSP-92-Two"/>
@@ -151,7 +152,6 @@
                                                 <constraint firstAttribute="trailing" secondItem="4Z9-tL-pIC" secondAttribute="trailing" constant="10" id="kCV-md-oIu"/>
                                                 <constraint firstItem="Dbf-2W-F3G" firstAttribute="leading" secondItem="dRr-Nd-zPR" secondAttribute="trailing" constant="10" id="p65-Bh-HdO"/>
                                                 <constraint firstItem="Did-8t-yWQ" firstAttribute="top" secondItem="ViT-m5-vkV" secondAttribute="bottom" constant="10" id="pIJ-WX-aw5"/>
-                                                <constraint firstItem="dRr-Nd-zPR" firstAttribute="leading" secondItem="OeV-Hv-Nt5" secondAttribute="leading" constant="10" id="t5z-mY-bGt" userLabel="Image View.leading = leading + 10"/>
                                                 <constraint firstItem="ViT-m5-vkV" firstAttribute="leading" secondItem="OeV-Hv-Nt5" secondAttribute="leading" constant="10" id="xmM-9Q-xA3"/>
                                             </constraints>
                                         </tableViewCellContentView>
