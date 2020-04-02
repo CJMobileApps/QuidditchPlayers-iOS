@@ -18,26 +18,55 @@ class QuidditchPlayersListScreen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let apiCompleted: ([Player]) -> Void = { (players) in
-
+        let fetchPlayersCompleted: ([Player]) -> Void = { (players) in
+            
             self.quidditchPlayers = players
             self.playerTableView.delegate = self
             self.playerTableView.dataSource = self
             self.playerTableView.reloadData()
         }
-        makeApiCall(apiCompleted: apiCompleted)
+        fetchPlayers(fetchPlayersCompleted: fetchPlayersCompleted)
     }
     
-    func makeApiCall(apiCompleted: @escaping ([Player]) -> ()) {
+    func fetchPlayers(fetchPlayersCompleted: @escaping ([Player]) -> ()) {
         
         if let url = URL(string: "https://cjmobileapps.com/api/v1/quidditch/players") {
             URLSession.shared.dataTask(with: url) { data, response, error in
                 if let data = data {
                     do {
                         let players = try JSONDecoder().decode([Player].self, from: data)
-
+                        
+                        self.fetchPositions(players: players, fetchPlayersCompleted: fetchPlayersCompleted)
+                        
+                    } catch let error {
+                        print(error)
+                    }
+                }
+            }.resume()
+        }
+    }
+    
+    func fetchPositions(players: [Player], fetchPlayersCompleted: @escaping ([Player]) -> ()) {
+        var players = players
+        
+        if let url = URL(string: "https://cjmobileapps.com/api/v1/quidditch/positions") {
+            URLSession.shared.dataTask(with: url) { data, response, error in
+                if let data = data {
+                    do {
+                        let positions = try JSONDecoder().decode([Position].self, from: data)
+                        
+                        var positionsDict = [Int:String]()
+                        
+                        positions.forEach{ position in
+                            positionsDict[position.id] = position.positionName
+                        }
+                        
+                        for (index, player) in players.enumerated() {
+                            players[index].positionName = positionsDict[player.position]
+                        }
+                        
                         DispatchQueue.main.async {
-                            apiCompleted(players)
+                            fetchPlayersCompleted(players)
                         }
                         
                     } catch let error {
@@ -46,7 +75,7 @@ class QuidditchPlayersListScreen: UIViewController {
                 }
             }.resume()
         }
-    }   
+    }
 }
 
 extension QuidditchPlayersListScreen: UITableViewDataSource, UITableViewDelegate {

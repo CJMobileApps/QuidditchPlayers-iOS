@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		3C2DD463242C50EE000A1297 /* QuidditchPlayersListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DD462242C50EE000A1297 /* QuidditchPlayersListScreen.swift */; };
 		3C2DD46A242DA172000A1297 /* LabelHeadline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DD469242DA172000A1297 /* LabelHeadline.swift */; };
 		3C2DD46D242DA4B9000A1297 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DD46C242DA4B9000A1297 /* Colors.swift */; };
+		3C65C2852435C9A70006BAB9 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65C2842435C9A70006BAB9 /* Position.swift */; };
 		3CCC6DA2242DAB240015036B /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC6DA1242DAB240015036B /* Fonts.swift */; };
 		3CCC6DA4242E08480015036B /* LabelBodyPrimaryTextColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC6DA3242E08480015036B /* LabelBodyPrimaryTextColor.swift */; };
 		3CCC6DA6242E0A950015036B /* LabelBodyAlternateTextColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC6DA5242E0A950015036B /* LabelBodyAlternateTextColor.swift */; };
@@ -36,6 +37,7 @@
 		3C2DD462242C50EE000A1297 /* QuidditchPlayersListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuidditchPlayersListScreen.swift; sourceTree = "<group>"; };
 		3C2DD469242DA172000A1297 /* LabelHeadline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelHeadline.swift; sourceTree = "<group>"; };
 		3C2DD46C242DA4B9000A1297 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		3C65C2842435C9A70006BAB9 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		3CCC6DA1242DAB240015036B /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		3CCC6DA3242E08480015036B /* LabelBodyPrimaryTextColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelBodyPrimaryTextColor.swift; sourceTree = "<group>"; };
 		3CCC6DA5242E0A950015036B /* LabelBodyAlternateTextColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelBodyAlternateTextColor.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				3CCC6DAE24319C7B0015036B /* Player.swift */,
+				3C65C2842435C9A70006BAB9 /* Position.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -136,7 +139,6 @@
 				6F0D2140AFA74511F3A9421B /* Pods-QuidditchPlayers.debug.xcconfig */,
 				A51823C22ADF1BA91D481913 /* Pods-QuidditchPlayers.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -257,6 +259,7 @@
 			files = (
 				3CCC6DAF24319C7B0015036B /* Player.swift in Sources */,
 				3CCC6DA6242E0A950015036B /* LabelBodyAlternateTextColor.swift in Sources */,
+				3C65C2852435C9A70006BAB9 /* Position.swift in Sources */,
 				3CCC6DA2242DAB240015036B /* Fonts.swift in Sources */,
 				3CCC6DA4242E08480015036B /* LabelBodyPrimaryTextColor.swift in Sources */,
 				3C2DD44F242C4C08000A1297 /* AppDelegate.swift in Sources */,

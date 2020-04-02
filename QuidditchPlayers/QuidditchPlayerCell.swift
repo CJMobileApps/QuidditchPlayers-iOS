@@ -23,7 +23,7 @@ class QuidditchPlayerCell: UITableViewCell {
         playerImage.kf.setImage(with: imageUrl)
         
         playerName.text =  "\(player.firstName) \(player.lastName)"
-        playerPosition.text = "Seeker" //todo update with position from api call
+        playerPosition.text = player.positionName
         playerHouse.text = StringConstants.GRYFFINDOR
         playerFavoriteSubject.text = player.favoriteSubject
         playerYearsPlayed.text = player.yearsPlayed.description

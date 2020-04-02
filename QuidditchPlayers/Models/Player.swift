@@ -17,4 +17,5 @@ struct Player: Decodable {
     let favoriteSubject: String
     let imageUrl: String
     let position: Int
+    var positionName: String?
 }
