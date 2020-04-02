@@ -18,6 +18,8 @@ class QuidditchPlayersListScreen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        playerTableView.tableFooterView = UIView()
+        
         let fetchPlayersCompleted: ([Player]) -> Void = { (players) in
             
             self.quidditchPlayers = players
