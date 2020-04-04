@@ -15,7 +15,7 @@ class QuidditchPlayersService {
     func fetchPlayers() -> Single<[Player]> {        
         return Single<[Player]>.create { single in
             
-            let request = AF.request("https://cjmobileapps.com/api/v1/quidditch/players").responseDecodable(of: [Player].self) { response in
+            let request = AF.request(PlayersRouter.players).responseDecodable(of: [Player].self) { response in
                 
                 switch response.result {
                 case .success(let players):
@@ -32,7 +32,7 @@ class QuidditchPlayersService {
     func fetchPositions() -> Single<[Position]> {
         return Single<[Position]>.create { single in
             
-            let request = AF.request("https://cjmobileapps.com/api/v1/quidditch/positions").responseDecodable(of: [Position].self) { response in
+            let request = AF.request(PlayersRouter.positions).responseDecodable(of: [Position].self) { response in
                 
                 switch response.result {
                 case .success(let position):

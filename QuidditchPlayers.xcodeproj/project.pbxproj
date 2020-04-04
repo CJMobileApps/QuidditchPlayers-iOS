@@ -19,6 +19,9 @@
 		3C65C28724364F850006BAB9 /* UIImageViewBlackBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65C28624364F850006BAB9 /* UIImageViewBlackBorder.swift */; };
 		3C65C28C2436E0350006BAB9 /* QuidditchPlayersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65C28B2436E0350006BAB9 /* QuidditchPlayersViewModel.swift */; };
 		3C65C28F2436E3020006BAB9 /* QuidditchPlayersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65C28E2436E3020006BAB9 /* QuidditchPlayersService.swift */; };
+		3C65C293243889690006BAB9 /* PlayersRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65C292243889690006BAB9 /* PlayersRouter.swift */; };
+		3C65C29524388DE40006BAB9 /* APIRouterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65C29424388DE40006BAB9 /* APIRouterConfiguration.swift */; };
+		3C65C29724389A690006BAB9 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65C29624389A690006BAB9 /* NetworkConstants.swift */; };
 		3CCC6DA2242DAB240015036B /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC6DA1242DAB240015036B /* Fonts.swift */; };
 		3CCC6DA4242E08480015036B /* LabelBodyPrimaryTextColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC6DA3242E08480015036B /* LabelBodyPrimaryTextColor.swift */; };
 		3CCC6DA6242E0A950015036B /* LabelBodyAlternateTextColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC6DA5242E0A950015036B /* LabelBodyAlternateTextColor.swift */; };
@@ -44,6 +47,9 @@
 		3C65C28624364F850006BAB9 /* UIImageViewBlackBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewBlackBorder.swift; sourceTree = "<group>"; };
 		3C65C28B2436E0350006BAB9 /* QuidditchPlayersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuidditchPlayersViewModel.swift; sourceTree = "<group>"; };
 		3C65C28E2436E3020006BAB9 /* QuidditchPlayersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuidditchPlayersService.swift; sourceTree = "<group>"; };
+		3C65C292243889690006BAB9 /* PlayersRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersRouter.swift; sourceTree = "<group>"; };
+		3C65C29424388DE40006BAB9 /* APIRouterConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouterConfiguration.swift; sourceTree = "<group>"; };
+		3C65C29624389A690006BAB9 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		3CCC6DA1242DAB240015036B /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		3CCC6DA3242E08480015036B /* LabelBodyPrimaryTextColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelBodyPrimaryTextColor.swift; sourceTree = "<group>"; };
 		3CCC6DA5242E0A950015036B /* LabelBodyAlternateTextColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelBodyAlternateTextColor.swift; sourceTree = "<group>"; };
@@ -153,6 +159,9 @@
 			children = (
 				3CCC6DA9242F55EC0015036B /* Models */,
 				3C65C28E2436E3020006BAB9 /* QuidditchPlayersService.swift */,
+				3C65C292243889690006BAB9 /* PlayersRouter.swift */,
+				3C65C29424388DE40006BAB9 /* APIRouterConfiguration.swift */,
+				3C65C29624389A690006BAB9 /* NetworkConstants.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -298,6 +307,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C65C29724389A690006BAB9 /* NetworkConstants.swift in Sources */,
+				3C65C293243889690006BAB9 /* PlayersRouter.swift in Sources */,
 				3CCC6DAF24319C7B0015036B /* Player.swift in Sources */,
 				3C65C28C2436E0350006BAB9 /* QuidditchPlayersViewModel.swift in Sources */,
 				3CCC6DA6242E0A950015036B /* LabelBodyAlternateTextColor.swift in Sources */,
@@ -310,6 +321,7 @@
 				3C65C28F2436E3020006BAB9 /* QuidditchPlayersService.swift in Sources */,
 				3CCC6DB12431C7800015036B /* StringConstants.swift in Sources */,
 				3C2DD46D242DA4B9000A1297 /* Colors.swift in Sources */,
+				3C65C29524388DE40006BAB9 /* APIRouterConfiguration.swift in Sources */,
 				3C2DD463242C50EE000A1297 /* QuidditchPlayersListScreen.swift in Sources */,
 				3CCC6DA8242E10470015036B /* QuidditchPlayerCell.swift in Sources */,
 				3C2DD46A242DA172000A1297 /* LabelHeadline.swift in Sources */,
