@@ -10,4 +10,5 @@ import Foundation
 
 struct StringConstants {
     static let GRYFFINDOR = "Gryffindor"
+    static let QUIDDITCH_PLAYERS_TITLE = "Quidditch Players"
 }

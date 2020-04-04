@@ -22,6 +22,7 @@
 		3C65C293243889690006BAB9 /* PlayersRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65C292243889690006BAB9 /* PlayersRouter.swift */; };
 		3C65C29524388DE40006BAB9 /* APIRouterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65C29424388DE40006BAB9 /* APIRouterConfiguration.swift */; };
 		3C65C29724389A690006BAB9 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65C29624389A690006BAB9 /* NetworkConstants.swift */; };
+		3C65C2992438AA660006BAB9 /* BaseUINaviagtionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65C2982438AA660006BAB9 /* BaseUINaviagtionController.swift */; };
 		3CCC6DA2242DAB240015036B /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC6DA1242DAB240015036B /* Fonts.swift */; };
 		3CCC6DA4242E08480015036B /* LabelBodyPrimaryTextColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC6DA3242E08480015036B /* LabelBodyPrimaryTextColor.swift */; };
 		3CCC6DA6242E0A950015036B /* LabelBodyAlternateTextColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC6DA5242E0A950015036B /* LabelBodyAlternateTextColor.swift */; };
@@ -50,6 +51,7 @@
 		3C65C292243889690006BAB9 /* PlayersRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersRouter.swift; sourceTree = "<group>"; };
 		3C65C29424388DE40006BAB9 /* APIRouterConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouterConfiguration.swift; sourceTree = "<group>"; };
 		3C65C29624389A690006BAB9 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		3C65C2982438AA660006BAB9 /* BaseUINaviagtionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUINaviagtionController.swift; sourceTree = "<group>"; };
 		3CCC6DA1242DAB240015036B /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		3CCC6DA3242E08480015036B /* LabelBodyPrimaryTextColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelBodyPrimaryTextColor.swift; sourceTree = "<group>"; };
 		3CCC6DA5242E0A950015036B /* LabelBodyAlternateTextColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelBodyAlternateTextColor.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				3CCC6DA3242E08480015036B /* LabelBodyPrimaryTextColor.swift */,
 				3CCC6DA5242E0A950015036B /* LabelBodyAlternateTextColor.swift */,
 				3C65C28624364F850006BAB9 /* UIImageViewBlackBorder.swift */,
+				3C65C2982438AA660006BAB9 /* BaseUINaviagtionController.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				3CCC6DB12431C7800015036B /* StringConstants.swift in Sources */,
 				3C2DD46D242DA4B9000A1297 /* Colors.swift in Sources */,
 				3C65C29524388DE40006BAB9 /* APIRouterConfiguration.swift in Sources */,
+				3C65C2992438AA660006BAB9 /* BaseUINaviagtionController.swift in Sources */,
 				3C2DD463242C50EE000A1297 /* QuidditchPlayersListScreen.swift in Sources */,
 				3CCC6DA8242E10470015036B /* QuidditchPlayerCell.swift in Sources */,
 				3C2DD46A242DA172000A1297 /* LabelHeadline.swift in Sources */,

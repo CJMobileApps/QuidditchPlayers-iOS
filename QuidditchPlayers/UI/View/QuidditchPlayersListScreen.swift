@@ -18,6 +18,8 @@ class QuidditchPlayersListScreen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = StringConstants.QUIDDITCH_PLAYERS_TITLE
+        
         let quidditchPlayersService = QuidditchPlayersService()
         
         playerTableView.tableFooterView = UIView()

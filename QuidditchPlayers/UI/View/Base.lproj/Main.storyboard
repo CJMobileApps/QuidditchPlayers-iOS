@@ -186,10 +186,10 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="112.5"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--BaseUI Naviagtion Controller-->
         <scene sceneID="YmD-fj-mUe">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Hf-aC-Ub2" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Hf-aC-Ub2" customClass="BaseUINaviagtionController" customModule="QuidditchPlayers" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ody-lO-kLG">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
