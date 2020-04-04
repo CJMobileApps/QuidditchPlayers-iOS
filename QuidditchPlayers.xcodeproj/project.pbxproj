@@ -17,6 +17,8 @@
 		3C2DD46D242DA4B9000A1297 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DD46C242DA4B9000A1297 /* Colors.swift */; };
 		3C65C2852435C9A70006BAB9 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65C2842435C9A70006BAB9 /* Position.swift */; };
 		3C65C28724364F850006BAB9 /* UIImageViewBlackBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65C28624364F850006BAB9 /* UIImageViewBlackBorder.swift */; };
+		3C65C28C2436E0350006BAB9 /* QuidditchPlayersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65C28B2436E0350006BAB9 /* QuidditchPlayersViewModel.swift */; };
+		3C65C28F2436E3020006BAB9 /* QuidditchPlayersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65C28E2436E3020006BAB9 /* QuidditchPlayersService.swift */; };
 		3CCC6DA2242DAB240015036B /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC6DA1242DAB240015036B /* Fonts.swift */; };
 		3CCC6DA4242E08480015036B /* LabelBodyPrimaryTextColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC6DA3242E08480015036B /* LabelBodyPrimaryTextColor.swift */; };
 		3CCC6DA6242E0A950015036B /* LabelBodyAlternateTextColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC6DA5242E0A950015036B /* LabelBodyAlternateTextColor.swift */; };
@@ -40,6 +42,8 @@
 		3C2DD46C242DA4B9000A1297 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		3C65C2842435C9A70006BAB9 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		3C65C28624364F850006BAB9 /* UIImageViewBlackBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewBlackBorder.swift; sourceTree = "<group>"; };
+		3C65C28B2436E0350006BAB9 /* QuidditchPlayersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuidditchPlayersViewModel.swift; sourceTree = "<group>"; };
+		3C65C28E2436E3020006BAB9 /* QuidditchPlayersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuidditchPlayersService.swift; sourceTree = "<group>"; };
 		3CCC6DA1242DAB240015036B /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		3CCC6DA3242E08480015036B /* LabelBodyPrimaryTextColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelBodyPrimaryTextColor.swift; sourceTree = "<group>"; };
 		3CCC6DA5242E0A950015036B /* LabelBodyAlternateTextColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelBodyAlternateTextColor.swift; sourceTree = "<group>"; };
@@ -83,15 +87,12 @@
 		3C2DD44D242C4C08000A1297 /* QuidditchPlayers */ = {
 			isa = PBXGroup;
 			children = (
-				3CCC6DA9242F55EC0015036B /* Models */,
+				3C65C28D2436E1830006BAB9 /* Network */,
+				3C65C2882436DED60006BAB9 /* UI */,
 				3C2DD46B242DA460000A1297 /* Res */,
 				3C2DD468242D9FEA000A1297 /* CustomViews */,
 				3C2DD44E242C4C08000A1297 /* AppDelegate.swift */,
 				3C2DD450242C4C09000A1297 /* SceneDelegate.swift */,
-				3C2DD462242C50EE000A1297 /* QuidditchPlayersListScreen.swift */,
-				3C2DD454242C4C09000A1297 /* Main.storyboard */,
-				3CCC6DA7242E10470015036B /* QuidditchPlayerCell.swift */,
-				3C2DD457242C4C0D000A1297 /* Assets.xcassets */,
 				3C2DD459242C4C0D000A1297 /* LaunchScreen.storyboard */,
 				3C2DD45C242C4C0D000A1297 /* Info.plist */,
 			);
@@ -112,11 +113,48 @@
 		3C2DD46B242DA460000A1297 /* Res */ = {
 			isa = PBXGroup;
 			children = (
+				3C2DD457242C4C0D000A1297 /* Assets.xcassets */,
 				3C2DD46C242DA4B9000A1297 /* Colors.swift */,
 				3CCC6DA1242DAB240015036B /* Fonts.swift */,
 				3CCC6DB02431C7800015036B /* StringConstants.swift */,
 			);
 			path = Res;
+			sourceTree = "<group>";
+		};
+		3C65C2882436DED60006BAB9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3C65C28A2436DF4C0006BAB9 /* View */,
+				3C65C2892436DEEA0006BAB9 /* ViewModel */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		3C65C2892436DEEA0006BAB9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3C65C28B2436E0350006BAB9 /* QuidditchPlayersViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3C65C28A2436DF4C0006BAB9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3C2DD454242C4C09000A1297 /* Main.storyboard */,
+				3C2DD462242C50EE000A1297 /* QuidditchPlayersListScreen.swift */,
+				3CCC6DA7242E10470015036B /* QuidditchPlayerCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3C65C28D2436E1830006BAB9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3CCC6DA9242F55EC0015036B /* Models */,
+				3C65C28E2436E3020006BAB9 /* QuidditchPlayersService.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		3CCC6DA9242F55EC0015036B /* Models */ = {
@@ -261,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CCC6DAF24319C7B0015036B /* Player.swift in Sources */,
+				3C65C28C2436E0350006BAB9 /* QuidditchPlayersViewModel.swift in Sources */,
 				3CCC6DA6242E0A950015036B /* LabelBodyAlternateTextColor.swift in Sources */,
 				3C65C2852435C9A70006BAB9 /* Position.swift in Sources */,
 				3C65C28724364F850006BAB9 /* UIImageViewBlackBorder.swift in Sources */,
@@ -268,6 +307,7 @@
 				3CCC6DA4242E08480015036B /* LabelBodyPrimaryTextColor.swift in Sources */,
 				3C2DD44F242C4C08000A1297 /* AppDelegate.swift in Sources */,
 				3C2DD451242C4C09000A1297 /* SceneDelegate.swift in Sources */,
+				3C65C28F2436E3020006BAB9 /* QuidditchPlayersService.swift in Sources */,
 				3CCC6DB12431C7800015036B /* StringConstants.swift in Sources */,
 				3C2DD46D242DA4B9000A1297 /* Colors.swift in Sources */,
 				3C2DD463242C50EE000A1297 /* QuidditchPlayersListScreen.swift in Sources */,
