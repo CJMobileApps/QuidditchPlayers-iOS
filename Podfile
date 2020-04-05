@@ -8,7 +8,6 @@ target 'QuidditchPlayers' do
   
   # Network
   pod 'Alamofire', '~> 5.0'
-  pod 'Starscream', '~> 4.0.0'
   
   # RxSwift      
   pod 'RxSwift', '~> 5'

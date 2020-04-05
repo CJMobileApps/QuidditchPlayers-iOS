@@ -9,12 +9,9 @@
 import Foundation
 import Alamofire
 import RxSwift
-import Starscream
 
 class QuidditchPlayersService {
-    
-    var websocket: WebSocket? = nil
-    
+        
     func fetchPlayers() -> Single<[Player]> {        
         return Single<[Player]>.create { single in
             
@@ -56,6 +53,7 @@ class QuidditchPlayersService {
                 emitter.onNext(status)
             }
             
+            // TODO: dependency injection
             let webSocketRepository = WebSocketRepository()
             webSocketRepository.connectToStatuses(onStatus: onStatus)
             
