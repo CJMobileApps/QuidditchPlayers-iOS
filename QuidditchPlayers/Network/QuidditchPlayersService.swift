@@ -9,8 +9,11 @@
 import Foundation
 import Alamofire
 import RxSwift
+import Starscream
 
 class QuidditchPlayersService {
+    
+    var websocket: WebSocket? = nil
     
     func fetchPlayers() -> Single<[Player]> {        
         return Single<[Player]>.create { single in
@@ -43,6 +46,21 @@ class QuidditchPlayersService {
             }
             
             return Disposables.create { request.cancel() }
+        }
+    }
+    
+    func getStatuses() -> Observable<Status> {
+        return Observable<Status>.create { emitter in
+            
+            let onStatus: (Status) -> Void = { (status) in
+                emitter.onNext(status)
+            }
+            
+            let webSocketRepository = WebSocketRepository()
+            webSocketRepository.connectToStatuses(onStatus: onStatus)
+            
+            return Disposables.create { webSocketRepository.disconnectFromStatuses()
+            }
         }
     }
 }

@@ -18,4 +18,5 @@ struct Player: Decodable {
     let imageUrl: String
     let position: Int
     var positionName: String?
+    var status: String?
 }

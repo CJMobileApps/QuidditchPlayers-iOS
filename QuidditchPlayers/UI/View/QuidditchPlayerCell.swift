@@ -27,6 +27,6 @@ class QuidditchPlayerCell: UITableViewCell {
         playerHouse.text = StringConstants.GRYFFINDOR
         playerFavoriteSubject.text = player.favoriteSubject
         playerYearsPlayed.text = player.yearsPlayed.description
-        playerStatus.text = "Harry Potter is eating"
+        playerStatus.text = player.status
     }
 }

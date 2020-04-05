@@ -1,22 +1,22 @@
 PODS:
   - Alamofire (5.0.5)
-  - Kingfisher (5.13.2):
-    - Kingfisher/Core (= 5.13.2)
-  - Kingfisher/Core (5.13.2)
+  - Kingfisher (5.13.3):
+    - Kingfisher/Core (= 5.13.3)
+  - Kingfisher/Core (5.13.3)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
-  - SwiftWebSocket (2.7.0)
+  - Starscream (4.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0)
   - Kingfisher (~> 5.0)
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
-  - SwiftWebSocket
+  - Starscream (~> 4.0.0)
 
 SPEC REPOS:
   trunk:
@@ -25,16 +25,16 @@ SPEC REPOS:
     - RxCocoa
     - RxRelay
     - RxSwift
-    - SwiftWebSocket
+    - Starscream
 
 SPEC CHECKSUMS:
   Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
-  Kingfisher: d342c8354c10c3d85a27d6d4c42c41285924b898
+  Kingfisher: d2b3d6a7200c93b34de9afcdf25c8dd9282ec277
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
-  SwiftWebSocket: 612c9729fd503cb6b0b8b45390c788686dac306f
+  Starscream: 04b26f02727e10a002e6b5d21b188ba0d049910b
 
-PODFILE CHECKSUM: f1a1d53bca02aa2307b6690041825f3babb5c774
+PODFILE CHECKSUM: 59b7c9dd73a1539777548246e9a367494e281cca
 
 COCOAPODS: 1.9.1
