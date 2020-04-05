@@ -27,11 +27,23 @@ class QuidditchPlayersListScreen: UIViewController {
         
         quidditchViewModel.players
             .subscribe(onNext: { players in
-                   
-                    self.quidditchPlayers = players
-                    self.playerTableView.delegate = self
-                    self.playerTableView.dataSource = self
-                    self.playerTableView.reloadData()
+                
+                self.quidditchPlayers = players
+                self.playerTableView.delegate = self
+                self.playerTableView.dataSource = self
+                self.playerTableView.reloadData()
+            })
+        
+        quidditchViewModel.status
+            .subscribe(onNext: { status in
+                
+                guard let index = quidditchViewModel.playersIndexDict[status.id] else {
+                    return
+                }
+                let indexPathRow:Int = index
+                self.quidditchPlayers[index].status = status.status
+                let indexPosition = IndexPath(row: indexPathRow, section: 0)
+                self.playerTableView.reloadRows(at: [indexPosition], with: .none)
             })
         
         quidditchViewModel.fetchPlayers()

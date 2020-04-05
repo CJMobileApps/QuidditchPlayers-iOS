@@ -11,7 +11,7 @@ import Alamofire
 import RxSwift
 
 class QuidditchPlayersService {
-    
+        
     func fetchPlayers() -> Single<[Player]> {        
         return Single<[Player]>.create { single in
             
@@ -43,6 +43,22 @@ class QuidditchPlayersService {
             }
             
             return Disposables.create { request.cancel() }
+        }
+    }
+    
+    func getStatuses() -> Observable<Status> {
+        return Observable<Status>.create { emitter in
+            
+            let onStatus: (Status) -> Void = { (status) in
+                emitter.onNext(status)
+            }
+            
+            // TODO: dependency injection
+            let webSocketRepository = WebSocketRepository()
+            webSocketRepository.connectToStatuses(onStatus: onStatus)
+            
+            return Disposables.create { webSocketRepository.disconnectFromStatuses()
+            }
         }
     }
 }

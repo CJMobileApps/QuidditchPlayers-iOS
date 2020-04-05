@@ -6,9 +6,9 @@ target 'QuidditchPlayers' do
   # Pods for QuidditchPlayers
   pod 'Kingfisher', '~> 5.0'
   
-  # Network Alamofire
+  # Network
   pod 'Alamofire', '~> 5.0'
-
+  
   # RxSwift      
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
