@@ -10,83 +10,79 @@ import Foundation
 import RxSwift
 
 class QuidditchPlayersViewModel {
-    
+
+    let tag = String(describing: QuidditchPlayersViewModel.self)
+
     let compositeDisposable = CompositeDisposable()
     let quidditchPlayersService: QuidditchPlayersService
-    var playersIndexDict = [Int:Int]()
-    
+    var playersIndexDict = [String: Int]()
+
     var players: Observable<[Player]> {
-        return self.playersSubject.asObservable()
+        self.playersSubject.asObservable()
     }
-    
+
     var status: Observable<Status> {
-        return self.statusesSubject.asObservable()
+        self.statusesSubject.asObservable()
     }
-    
+
     private var playersSubject = PublishSubject<[Player]>()
     private var statusesSubject = PublishSubject<Status>()
-    
+
     init(quidditchPlayersService: QuidditchPlayersService) {
         self.quidditchPlayersService = quidditchPlayersService
     }
-    
+
     func fetchPlayers() {
         compositeDisposable.insert(getPlayersAndPositions(playersObservable: getPlayersObservable(), positionsObservable: getPositionsObservable()))
         compositeDisposable.insert(getStatuses())
     }
-    
-    func getPlayersObservable() -> Observable<[Player]> {          quidditchPlayersService.fetchPlayers().asObservable().subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
+
+    func getPlayersObservable() -> Observable<[Player]> {
+        quidditchPlayersService.fetchPlayers().asObservable().subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
     }
-    
-    func getPositionsObservable() -> Observable<[Position]> {
+
+    func getPositionsObservable() -> Observable<[Int: String]> {
         quidditchPlayersService.fetchPositions().asObservable()
-            .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
+                .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
     }
-    
+
     private func getPlayersAndPositions(
-        playersObservable: Observable<[Player]>,
-        positionsObservable: Observable<[Position]>
+            playersObservable: Observable<[Player]>,
+            positionsObservable: Observable<[Int: String]>
     ) -> Disposable {
-        Observable.zip(playersObservable, positionsObservable) { (players, positions) in
+        Observable.zip(playersObservable, positionsObservable) { (players: [Player], positions: [Int: String]) in
             var players = players
-            var positionsDict = [Int:String]()
-            
-            positions.forEach{ position in
-                positionsDict[position.id] = position.positionName
-            }
-            
+
             for (index, player) in players.enumerated() {
-                players[index].positionName = positionsDict[player.position]
+                players[index].positionName = positions[player.position]
                 players[index].status = "No Status"
                 self.playersIndexDict[player.id] = index
             }
-            
             return players
-        }
-        .observeOn(MainScheduler.instance)
-        .subscribe(onNext: { (players: [Player]) in
+
+        }.observeOn(MainScheduler.instance).subscribe(onNext: { (players: [Player]) in
             self.playersSubject.onNext(players)
-        }, onError: { (error: Error) in
-            print("HERE_","error viewmodel \(error)")
+        }, onError: { error in
+            print("\(self.tag): error ViewModel \(error)")
         }, onCompleted: {
             //
         }) {
             //
         }
     }
-    
+
     private func getStatuses() -> Disposable {
         quidditchPlayersService.getStatuses()
-            .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
-            .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { (status: Status) in
-                self.statusesSubject.onNext(status)
-            }, onError: { (error: Error) in
-                print("HERE_","error viewmodel \(error)")
-            }, onCompleted: {
-                //
-            }) {
-                //
-        }
+                .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
+                .observeOn(MainScheduler.instance)
+                .subscribe(onNext: { (status: Status) in
+                    self.statusesSubject.onNext(status)
+                }, onError: { error in
+                    print("\(self.tag): error ViewModel \(error)")
+                }, onCompleted: {
+                    //
+                }) {
+                    //
+                }
     }
 }

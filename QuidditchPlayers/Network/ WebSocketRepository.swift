@@ -9,45 +9,49 @@
 import Foundation
 
 class WebSocketRepository: NSObject {
-    
+
+    let tag = String(describing: WebSocketRepository.self)
+
     var webSocketTask: URLSessionWebSocketTask? = nil
-        
+
     func connectToStatuses(onStatus: @escaping (Status) -> ()) {
-        if(webSocketTask == nil) {
+        if (webSocketTask == nil) {
             let urlSession = URLSession(configuration: .default)
-            webSocketTask = urlSession.webSocketTask(with: URL(string: "wss://cjmobileapps.com/api/v1/quidditch/status")!)
+            webSocketTask = urlSession.webSocketTask(with: URL(string: "wss://cjmobileapps.com/api/v2/quidditch/status")!)
             webSocketTask?.resume()
-            
+
             receiveMessage(onStatus: onStatus)
         }
     }
-    
+
     func receiveMessage(onStatus: @escaping (Status) -> ()) {
         webSocketTask?.receive { result in
             switch result {
             case .failure(let error):
-                print("HERE_","Error in receiving message: \(error)")
+                print("\(self.tag): Error in receiving message: \(error)")
             case .success(let message):
                 switch message {
                 case .string(let jsonString):
-                                        
+
                     do {
                         let jsonData = Data(jsonString.utf8)
 
-                        let status = try JSONDecoder().decode(Status.self, from: jsonData)
-                        onStatus(status)
+                        let responseWrapper = try JSONDecoder().decode(ResponseWrapper<Status>.self, from: jsonData)
+                        onStatus(responseWrapper.data)
                     } catch {
-                        print(error.localizedDescription)
+                        print("\(self.tag): error \(error.localizedDescription)")
                     }
                 case .data(let data):
-                    print("HERE_","Received data: \(data)")
+                    print("\(self.tag): Received data: \(data)")
+                @unknown default:
+                    print("\(self.tag): unknown error for web socket")
                 }
-                
+
                 self.receiveMessage(onStatus: onStatus)
             }
         }
     }
-    
+
     func disconnectFromStatuses() -> Bool {
         webSocketTask?.cancel(with: .goingAway, reason: nil)
         return true
@@ -56,10 +60,10 @@ class WebSocketRepository: NSObject {
 
 extension WebSocketRepository: URLSessionWebSocketDelegate {
     func urlSession(_ session: URLSession, webSocketTask: URLSessionWebSocketTask, didOpenWithProtocol protocol: String?) {
-        print("HERE_","Connected!")
+        print("\(tag): Connected!")
     }
-    
+
     func urlSession(_ session: URLSession, webSocketTask: URLSessionWebSocketTask, didCloseWith closeCode: URLSessionWebSocketTask.CloseCode, reason: Data?) {
-        print("HERE_","Disconnected!")
+        print("\(tag): Disconnected!")
     }
 }

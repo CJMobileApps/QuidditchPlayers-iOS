@@ -10,7 +10,7 @@ import Foundation
 
 struct Player: Decodable {
     
-    let id: Int
+    let id: String
     let firstName: String
     let lastName: String
     let yearsPlayed: [Int]
@@ -20,3 +20,7 @@ struct Player: Decodable {
     var positionName: String?
     var status: String?
 }
+
+//TODO update this
+//  val fullName: String	    val fullName: String
+//    get() = "$firstName $lastName"	        get() = "$firstName $lastName"

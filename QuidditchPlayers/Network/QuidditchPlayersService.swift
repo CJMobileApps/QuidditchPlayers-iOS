@@ -11,53 +11,76 @@ import Alamofire
 import RxSwift
 
 class QuidditchPlayersService {
-        
-    func fetchPlayers() -> Single<[Player]> {        
-        return Single<[Player]>.create { single in
-            
-            let request = AF.request(PlayersRouter.players).responseDecodable(of: [Player].self) { response in
-                
-                switch response.result {
-                case .success(let players):
-                    single(.success(players))
-                case .failure(let error):
-                    single(.error(error))
+
+    let tag = String(describing: QuidditchPlayersService.self)
+
+    let afSession = Session(eventMonitors: [HttpLogger()])
+
+    func fetchPlayers() -> Single<[Player]> {
+        Single<[Player]>.create { single in
+
+            let request = self.afSession.request(PlayersRouter.players).responseData { response in
+
+                do {
+                    switch response.result {
+                    case .success(let json):
+                        let responseWrapper = try JSONDecoder().decode(ResponseWrapper<[Player]>.self, from: json)
+                        let players: [Player] = responseWrapper.data
+                        single(.success(players))
+                    case .failure(let error):
+                        single(.error(error))
+                    }
+                } catch {
+
                 }
             }
-            
-            return Disposables.create { request.cancel() }
+
+            return Disposables.create {
+                request.cancel()
+            }
         }
     }
-    
-    func fetchPositions() -> Single<[Position]> {
-        return Single<[Position]>.create { single in
-            
-            let request = AF.request(PlayersRouter.positions).responseDecodable(of: [Position].self) { response in
-                
-                switch response.result {
-                case .success(let position):
-                    single(.success(position))
-                case .failure(let error):
-                    single(.error(error))
+
+    func fetchPositions() -> Single<[Int: String]> {
+        Single<[Int: String]>.create { single in
+
+            let request = self.afSession.request(PlayersRouter.positions).responseData { response in
+
+                do {
+                    switch response.result {
+                    case .success(let json):
+                        do {
+                            let responseWrapper = try JSONDecoder().decode(ResponseWrapper<[Int: String]>.self, from: json)
+                            let positions: [Int: String] = responseWrapper.data
+                            single(.success(positions))
+                        } catch let error {
+                            print("\(self.tag): error \(error)")
+                            print("\(self.tag): possibly something wrong with JSON or a bad url. Test with responseString instead of responseData")
+                        }
+                    case .failure(let error):
+                        single(.error(error))
+                    }
                 }
             }
-            
-            return Disposables.create { request.cancel() }
+
+            return Disposables.create {
+                request.cancel()
+            }
         }
     }
-    
+
     func getStatuses() -> Observable<Status> {
-        return Observable<Status>.create { emitter in
-            
+        Observable<Status>.create { emitter in
             let onStatus: (Status) -> Void = { (status) in
                 emitter.onNext(status)
             }
-            
+
             // TODO: dependency injection
             let webSocketRepository = WebSocketRepository()
             webSocketRepository.connectToStatuses(onStatus: onStatus)
-            
-            return Disposables.create { webSocketRepository.disconnectFromStatuses()
+
+            return Disposables.create {
+                webSocketRepository.disconnectFromStatuses()
             }
         }
     }

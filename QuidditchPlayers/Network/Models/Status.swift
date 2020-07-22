@@ -10,6 +10,6 @@ import Foundation
 
 struct Status: Decodable {
     
-    let id: Int
+    let id: String
     let status: String
 }
