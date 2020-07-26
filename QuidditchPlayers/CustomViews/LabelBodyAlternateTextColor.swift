@@ -17,8 +17,7 @@ class LabelBodyAlternateTextColor: UILabel {
     }
     
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setupTextField()
+        fatalError(StringConstants.NOT_USING_STORYBOARDS)
     }
 
     func setupTextField() {

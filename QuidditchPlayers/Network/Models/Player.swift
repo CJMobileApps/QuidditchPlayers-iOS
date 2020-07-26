@@ -19,8 +19,8 @@ struct Player: Decodable {
     let position: Int
     var positionName: String?
     var status: String?
-}
 
-//TODO update this
-//  val fullName: String	    val fullName: String
-//    get() = "$firstName $lastName"	        get() = "$firstName $lastName"
+    func getFullName() -> String {
+        "\(firstName) \(lastName)"
+    }
+}

@@ -14,10 +14,9 @@ class UIImageViewBlackBorder: UIImageView {
         super.init(frame: frame)
         setupUIImageView()
     }
-    
+
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setupUIImageView()
+        fatalError(StringConstants.NOT_USING_STORYBOARDS)
     }
 
     func setupUIImageView() {

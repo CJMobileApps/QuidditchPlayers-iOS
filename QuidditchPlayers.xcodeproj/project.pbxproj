@@ -10,10 +10,8 @@
 		3C20317A24390E5100392D79 /*  WebSocketRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C20317924390E5100392D79 /*  WebSocketRepository.swift */; };
 		3C2DD44F242C4C08000A1297 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DD44E242C4C08000A1297 /* AppDelegate.swift */; };
 		3C2DD451242C4C09000A1297 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DD450242C4C09000A1297 /* SceneDelegate.swift */; };
-		3C2DD456242C4C09000A1297 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2DD454242C4C09000A1297 /* Main.storyboard */; };
 		3C2DD458242C4C0D000A1297 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C2DD457242C4C0D000A1297 /* Assets.xcassets */; };
 		3C2DD45B242C4C0D000A1297 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2DD459242C4C0D000A1297 /* LaunchScreen.storyboard */; };
-		3C2DD463242C50EE000A1297 /* QuidditchPlayersListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DD462242C50EE000A1297 /* QuidditchPlayersListScreen.swift */; };
 		3C2DD46A242DA172000A1297 /* LabelHeadline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DD469242DA172000A1297 /* LabelHeadline.swift */; };
 		3C2DD46D242DA4B9000A1297 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DD46C242DA4B9000A1297 /* Colors.swift */; };
 		3C65C2852435C9A70006BAB9 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65C2842435C9A70006BAB9 /* Position.swift */; };
@@ -28,9 +26,11 @@
 		3CCC6DA2242DAB240015036B /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC6DA1242DAB240015036B /* Fonts.swift */; };
 		3CCC6DA4242E08480015036B /* LabelBodyPrimaryTextColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC6DA3242E08480015036B /* LabelBodyPrimaryTextColor.swift */; };
 		3CCC6DA6242E0A950015036B /* LabelBodyAlternateTextColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC6DA5242E0A950015036B /* LabelBodyAlternateTextColor.swift */; };
-		3CCC6DA8242E10470015036B /* QuidditchPlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC6DA7242E10470015036B /* QuidditchPlayerCell.swift */; };
 		3CCC6DAF24319C7B0015036B /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC6DAE24319C7B0015036B /* Player.swift */; };
 		3CCC6DB12431C7800015036B /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC6DB02431C7800015036B /* StringConstants.swift */; };
+		3CE472C324CB4A0900809706 /* QuidditchPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE472C224CB4A0900809706 /* QuidditchPlayersViewController.swift */; };
+		3CE472C524CB55B100809706 /* QuidditchPlayersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE472C424CB55B100809706 /* QuidditchPlayersCell.swift */; };
+		732F43040466CEBE0A1E33DF /* HeaderAndTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732F42D7FE8252FC7613865B /* HeaderAndTextView.swift */; };
 		732F44AECB6EAC17170A17F4 /* ResponseWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732F48CF6DD453425047C080 /* ResponseWrapper.swift */; };
 		732F45CC6F06F779A665A487 /* HttpLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732F4F23FF0E627C4639C5DD /* HttpLogger.swift */; };
 		B5331D0BAF6417B1103DA63B /* Pods_QuidditchPlayers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B4B3152107C6F437676C2B /* Pods_QuidditchPlayers.framework */; };
@@ -42,11 +42,9 @@
 		3C2DD44B242C4C08000A1297 /* QuidditchPlayers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuidditchPlayers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C2DD44E242C4C08000A1297 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C2DD450242C4C09000A1297 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3C2DD455242C4C09000A1297 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C2DD457242C4C0D000A1297 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C2DD45A242C4C0D000A1297 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C2DD45C242C4C0D000A1297 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3C2DD462242C50EE000A1297 /* QuidditchPlayersListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuidditchPlayersListScreen.swift; sourceTree = "<group>"; };
 		3C2DD469242DA172000A1297 /* LabelHeadline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelHeadline.swift; sourceTree = "<group>"; };
 		3C2DD46C242DA4B9000A1297 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		3C65C2842435C9A70006BAB9 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
@@ -61,10 +59,12 @@
 		3CCC6DA1242DAB240015036B /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		3CCC6DA3242E08480015036B /* LabelBodyPrimaryTextColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelBodyPrimaryTextColor.swift; sourceTree = "<group>"; };
 		3CCC6DA5242E0A950015036B /* LabelBodyAlternateTextColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelBodyAlternateTextColor.swift; sourceTree = "<group>"; };
-		3CCC6DA7242E10470015036B /* QuidditchPlayerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuidditchPlayerCell.swift; sourceTree = "<group>"; };
 		3CCC6DAE24319C7B0015036B /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		3CCC6DB02431C7800015036B /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
+		3CE472C224CB4A0900809706 /* QuidditchPlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuidditchPlayersViewController.swift; sourceTree = "<group>"; };
+		3CE472C424CB55B100809706 /* QuidditchPlayersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuidditchPlayersCell.swift; sourceTree = "<group>"; };
 		6F0D2140AFA74511F3A9421B /* Pods-QuidditchPlayers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuidditchPlayers.debug.xcconfig"; path = "Target Support Files/Pods-QuidditchPlayers/Pods-QuidditchPlayers.debug.xcconfig"; sourceTree = "<group>"; };
+		732F42D7FE8252FC7613865B /* HeaderAndTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderAndTextView.swift; sourceTree = "<group>"; };
 		732F48CF6DD453425047C080 /* ResponseWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseWrapper.swift; sourceTree = "<group>"; };
 		732F4F23FF0E627C4639C5DD /* HttpLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpLogger.swift; sourceTree = "<group>"; };
 		A51823C22ADF1BA91D481913 /* Pods-QuidditchPlayers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuidditchPlayers.release.xcconfig"; path = "Target Support Files/Pods-QuidditchPlayers/Pods-QuidditchPlayers.release.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +123,7 @@
 				3CCC6DA5242E0A950015036B /* LabelBodyAlternateTextColor.swift */,
 				3C65C28624364F850006BAB9 /* UIImageViewBlackBorder.swift */,
 				3C65C2982438AA660006BAB9 /* BaseUINaviagtionController.swift */,
+				732F42D7FE8252FC7613865B /* HeaderAndTextView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -158,9 +159,8 @@
 		3C65C28A2436DF4C0006BAB9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3C2DD454242C4C09000A1297 /* Main.storyboard */,
-				3C2DD462242C50EE000A1297 /* QuidditchPlayersListScreen.swift */,
-				3CCC6DA7242E10470015036B /* QuidditchPlayerCell.swift */,
+				3CE472C224CB4A0900809706 /* QuidditchPlayersViewController.swift */,
+				3CE472C424CB55B100809706 /* QuidditchPlayersCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -269,7 +269,6 @@
 			files = (
 				3C2DD45B242C4C0D000A1297 /* LaunchScreen.storyboard in Resources */,
 				3C2DD458242C4C0D000A1297 /* Assets.xcassets in Resources */,
-				3C2DD456242C4C09000A1297 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +331,9 @@
 				3C65C28724364F850006BAB9 /* UIImageViewBlackBorder.swift in Sources */,
 				3CCC6DA2242DAB240015036B /* Fonts.swift in Sources */,
 				3CCC6DA4242E08480015036B /* LabelBodyPrimaryTextColor.swift in Sources */,
+				3CE472C524CB55B100809706 /* QuidditchPlayersCell.swift in Sources */,
 				3C2DD44F242C4C08000A1297 /* AppDelegate.swift in Sources */,
+				3CE472C324CB4A0900809706 /* QuidditchPlayersViewController.swift in Sources */,
 				3C2DD451242C4C09000A1297 /* SceneDelegate.swift in Sources */,
 				3C65C29B2438C7030006BAB9 /* Status.swift in Sources */,
 				3C65C28F2436E3020006BAB9 /* QuidditchPlayersService.swift in Sources */,
@@ -340,25 +341,16 @@
 				3C2DD46D242DA4B9000A1297 /* Colors.swift in Sources */,
 				3C65C29524388DE40006BAB9 /* APIRouterConfiguration.swift in Sources */,
 				3C65C2992438AA660006BAB9 /* BaseUINaviagtionController.swift in Sources */,
-				3C2DD463242C50EE000A1297 /* QuidditchPlayersListScreen.swift in Sources */,
-				3CCC6DA8242E10470015036B /* QuidditchPlayerCell.swift in Sources */,
 				3C2DD46A242DA172000A1297 /* LabelHeadline.swift in Sources */,
 				732F45CC6F06F779A665A487 /* HttpLogger.swift in Sources */,
 				732F44AECB6EAC17170A17F4 /* ResponseWrapper.swift in Sources */,
+				732F43040466CEBE0A1E33DF /* HeaderAndTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3C2DD454242C4C09000A1297 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3C2DD455242C4C09000A1297 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3C2DD459242C4C0D000A1297 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
